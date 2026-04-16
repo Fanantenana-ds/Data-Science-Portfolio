@@ -20,7 +20,7 @@ st.set_page_config(
 )
 
 # =========================
-# CUSTOM CSS (ho tsara tarehy)
+#    CUSTOM CSS 
 # =========================
 st.markdown("""
 <style>
@@ -62,7 +62,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # =========================
-# HEADER
+#        HEADER
 # =========================
 st.markdown("""
 <div class="main-header">
@@ -74,7 +74,7 @@ st.markdown("""
 st.markdown("---")
 
 # =========================
-# LOAD MODELS
+#     LOAD MODELS
 # =========================
 @st.cache_resource
 def load_models():
@@ -355,19 +355,6 @@ if predict_btn and models_loaded:
             </div>
             """, unsafe_allow_html=True)
     
-    with col_rec2:
-        st.markdown(f"""
-        <div class="insight-box">
-            <h4>🔍 Facteurs influençant le prix</h4>
-            <ul>
-                <li>🏢 <strong>Superficie</strong>: {superficie_m2} m² → {"Très bonne" if superficie_m2 > 150 else "Moyenne" if superficie_m2 > 80 else "Petite"}</li>
-                <li>📍 <strong>Localisation</strong>: {localisation} → {"Prime de +20%" if localisation == "Urbain" else "Prix standard"}</li>
-                <li>🛣️ <strong>Accès route</strong>: {acces_route} → Plus-value +5 à 10%</li>
-                <li>🚗 <strong>Parking</strong>: {parking} → Plus-value +5 à 15%</li>
-                <li>🔌 <strong>Connexion</strong>: {connexion} → {"Atout majeur" if connexion == "Fibre" else "Standard"}</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
     
     # =========================
     # CONSEILS PERSONNALISÉS
@@ -395,10 +382,10 @@ if predict_btn and models_loaded:
         st.markdown("✅ **Félicitations!** Votre maison a d'excellentes caractéristiques. Le prix estimé est cohérent avec le marché.")
     
     # =========================
-    # FOOTER
+    #         FOOTER
     # =========================
     st.markdown("---")
-    st.caption(" Copyright @2026 Projet Data Science - House Price Prediction | Modèles entraînés sur données réelles ici à Madagascar")
+    st.caption("  Projet Data Science @2026 - House Price Prediction | Modèles entraînés sur données réelles à Madagascar")
 
 else:
     if not models_loaded:
