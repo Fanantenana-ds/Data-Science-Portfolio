@@ -1,0 +1,7 @@
+__pycache__/				
+*.pyc				
+.vscode/				
+venv/				
+.DS_Store
+data/raw
+.gitignore
