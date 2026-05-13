@@ -385,7 +385,7 @@ if predict_btn and models_loaded:
     #         FOOTER
     # =========================
     st.markdown("---")
-    st.caption("  Projet Data Science @2026 - House Price Prediction | Modèles entraînés sur données réelles à Madagascar")
+    st.caption("  Projet Data Science @2026 Fanantenana - House Price Prediction | Modèles entraînés sur données réelles à Madagascar")
 
 else:
     if not models_loaded:
